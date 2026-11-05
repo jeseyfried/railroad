@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f0cf94"/><stop offset=".42" stop-color="#d99b6e"/><stop offset="1" stop-color="#6d776e"/></linearGradient>
+    <linearGradient id="hills" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a58c74"/><stop offset="1" stop-color="#4f6764"/></linearGradient>
+    <linearGradient id="foreground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#324c49"/><stop offset="1" stop-color="#163338"/></linearGradient>
+    <pattern id="grain" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 0h1" stroke="#ffe8bc" opacity=".06"/></pattern>
+  </defs>
+  <rect width="840" height="900" fill="url(#sky)"/>
+  <circle cx="615" cy="274" r="143" fill="#f6ddac" opacity=".68"/><circle cx="615" cy="274" r="187" fill="#f3d7a6" opacity=".16"/>
+  <path d="M0 425 Q90 351 185 401 T369 390 Q454 348 554 390 Q654 340 840 398 V900H0Z" fill="#d5ad83" opacity=".65"/>
+  <path d="M0 495 121 442 254 480 400 424 523 448 677 402 840 464V900H0Z" fill="#a38e74" opacity=".62"/>
+  <path d="M0 541 Q161 448 319 505 T651 465 Q761 437 840 470V900H0Z" fill="url(#hills)"/>
+  <path d="M0 607 139 559 255 594 386 529 511 572 649 518 840 551V900H0Z" fill="#657572"/>
+  <path d="M0 708 Q150 670 277 710T551 685Q707 642 840 692V900H0Z" fill="#2e4c4b"/>
+  <g opacity=".26" stroke="#e8cba3" stroke-width="2"><path d="M20 560l30-48 40 55M91 560l29-57 39 65M679 571l35-78 44 78M756 574l40-74 31 83" fill="none"/></g>
+  <!-- viaduct, pillars and repeating arches -->
+  <g fill="#2b4544"><path d="M-30 612H870v40H-30Z"/><path d="M0 641H840V820H0Z"/></g>
+  <g fill="#60716a"><path d="M18 662H132V833H18Z"/><path d="M186 662H299V833H186Z"/><path d="M355 662H468V833H355Z"/><path d="M522 662H635V833H522Z"/><path d="M692 662H812V833H692Z"/></g>
+  <g fill="#a89277"><path d="M54 834V757a75 75 0 0 1 150 0v77Z"/><path d="M221 834V757a75 75 0 0 1 150 0v77Z"/><path d="M389 834V757a75 75 0 0 1 150 0v77Z"/><path d="M557 834V757a75 75 0 0 1 150 0v77Z"/><path d="M726 834V757a75 75 0 0 1 150 0v77Z"/></g>
+  <path d="M0 641h840M0 655h840" fill="none" stroke="#bd9f7e" stroke-width="6" opacity=".5"/>
+  <!-- Smoke plume and engine -->
+  <g fill="#fae8c6" opacity=".58"><circle cx="594" cy="378" r="32"/><circle cx="562" cy="341" r="37"/><circle cx="521" cy="319" r="44"/><circle cx="477" cy="288" r="37"/><circle cx="419" cy="262" r="49"/><circle cx="366" cy="255" r="43"/><circle cx="317" cy="222" r="48"/></g>
+  <g fill="#182c2e" stroke="#182c2e" stroke-linejoin="round">
+    <!-- passenger cars behind locomotive -->
+    <rect x="30" y="507" width="218" height="99" rx="5"/><path d="M30 503h218v-12H30Z"/><path d="M53 522h35v43H53ZM103 522h35v43h-35ZM153 522h35v43h-35ZM201 522h25v43h-25Z" fill="#d5a678" stroke="none"/>
+    <rect x="252" y="517" width="187" height="89" rx="3"/><path d="M247 508h196v12H247Z"/><path d="M271 526h38v38h-38ZM321 526h38v38h-38ZM370 526h38v38h-38Z" fill="#d5a678" stroke="none"/>
+    <!-- locomotive tender -->
+    <path d="M444 526h109v65l-13 15H444Z"/><path d="M452 535h91v32h-91Z" fill="#a66d52" stroke="none"/>
+    <!-- cab + boiler + front cowcatcher -->
+    <path d="M544 473h74v111h-74Z"/><path d="M537 469h90v11h-90Z"/><rect x="563" y="492" width="35" height="45" fill="#d7aa74" stroke="none"/>
+    <path d="M614 539h145v40H614Z"/><path d="M617 517h138v29H617Z"/><path d="M650 492h30v24h-30Z"/><path d="M649 489h32v7h-32Z"/><path d="M733 552h20v37h-20Z"/><path d="M760 556h25v35h-25Z"/><path d="M785 580l40 24h-49Z"/>
+    <!-- stacks -->
+    <path d="M716 505V464h19v41Z"/><path d="M706 453h38l-7 12h-24Z"/><path d="M642 517v-13h25v13Z"/>
+    <path d="M430 604H818v8H430Z"/>
+    <!-- wheels -->
+    <g fill="#14292e" stroke="#b09a7b" stroke-width="5"><circle cx="90" cy="610" r="20"/><circle cx="198" cy="610" r="20"/><circle cx="290" cy="611" r="20"/><circle cx="398" cy="611" r="20"/><circle cx="477" cy="610" r="18"/><circle cx="528" cy="610" r="18"/><circle cx="607" cy="601" r="34"/><circle cx="687" cy="601" r="34"/><circle cx="753" cy="604" r="24"/></g>
+    <path d="M608 602h80M607 600l-60 7" stroke="#bd9f80" stroke-width="6"/>
+  </g>
+  <path d="M0 831Q150 806 290 850T600 822Q725 795 840 827v73H0Z" fill="url(#foreground)"/>
+  <path d="M0 871Q174 837 323 888T720 872" stroke="#5b7265" stroke-width="3" fill="none" opacity=".5"/>
+  <rect width="840" height="900" fill="url(#grain)"/>
+</svg>
