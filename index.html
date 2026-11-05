@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the invention of the railroad and the growth of rail networks across the Northeastern United States.">
+  <meta name="theme-color" content="#17251f">
+  <title>Tracks of Change — Railroad History</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://tile.openstreetmap.org">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="Tracks of Change home"><span class="mark">T</span><span>FIELD NOTES <b>／ RAIL HISTORY</b></span></a>
+    <a class="top-link" href="#map-section">Explore the map <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A connected history · 1800s</p>
+        <h1>Tracks<br>of <em>change.</em></h1>
+        <p class="hero-intro">How steam, iron, and ambition remade travel—and stitched the Northeastern United States together.</p>
+        <a class="scroll-cue" href="#story"><span class="scroll-icon">↓</span> Follow the story</a>
+      </div>
+      <div class="hero-art" role="img" aria-label="Illustration of a steam locomotive crossing a rail bridge">
+        <div class="art-stamp">STEAM<br>AGE<br><b>1825—</b></div>
+        <div class="art-caption"><span>01 / ORIGINS</span><span>POWER IN MOTION</span></div>
+      </div>
+      <div class="hero-index">HISTORY<br>IN MOTION <span>— 01</span></div>
+    </section>
+
+    <section class="intro section-wrap" id="story">
+      <div class="section-label"><span>01</span><span>THE BREAKTHROUGH</span></div>
+      <div class="intro-body">
+        <h2>A new kind<br>of <em>distance.</em></h2>
+        <div class="intro-text">
+          <p>Railroads were not a single invention. They grew from centuries of trackways, better ironmaking, and experiments with steam power. Put together, those ideas made it possible to move people and freight farther, faster, and on a schedule.</p>
+          <p>In the early 1800s, engineers began pairing steam locomotives with purpose-built public railways. The result was more than a new machine: it was a new way to organize time, trade, and everyday life.</p>
+          <div class="pull-quote"><span>“</span><p>The railroad turned distance<br>into something people could plan.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline section-wrap" aria-labelledby="timeline-heading">
+      <div class="section-label"><span>02</span><span>THE RAILROAD TAKES SHAPE</span></div>
+      <div class="timeline-content">
+        <h2 id="timeline-heading">From experiment<br>to <em>network.</em></h2>
+        <div class="timeline-list">
+          <article class="time-item">
+            <span class="time-year">1804</span><div class="time-dot"></div>
+            <div><h3>Steam on rails</h3><p>Richard Trevithick’s steam locomotive hauled a load on an industrial tramway in South Wales. It proved steam could move on rails, though the heavy engine strained the track.</p></div>
+          </article>
+          <article class="time-item">
+            <span class="time-year">1825</span><div class="time-dot"></div>
+            <div><h3>A public railway opens</h3><p>England’s Stockton and Darlington Railway opened to carry coal and passengers. Locomotive power shared the line with horse-drawn and cable-hauled traffic.</p></div>
+          </article>
+          <article class="time-item">
+            <span class="time-year">1829</span><div class="time-dot"></div>
+            <div><h3>Speed wins the contest</h3><p>At the Rainhill Trials, George Stephenson’s <i>Rocket</i> demonstrated a practical combination of boiler, blast pipe, and multi-tubular design.</p></div>
+          </article>
+          <article class="time-item">
+            <span class="time-year">1830</span><div class="time-dot"></div>
+            <div><h3>America’s first common carrier</h3><p>The Baltimore &amp; Ohio Railroad began public service. Early American railways connected ports, canals, farms, and growing towns, often with a mix of power and technology.</p></div>
+          </article>
+          <article class="time-item">
+            <span class="time-year">1830s–<br>1900</span><div class="time-dot"></div>
+            <div><h3>Lines multiply</h3><p>Rail construction spread across the Northeast. Rival companies linked cities, industries, and rural communities, then consolidated into larger systems.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section" id="map-section">
+      <div class="map-heading">
+        <div><p class="eyebrow"><span class="eyebrow-line"></span> 03 / GEOGRAPHY IN MOTION</p><h2>Follow the <em>lines.</em></h2></div>
+        <p>Move through the century to see representative routes appear. Select a line for a short historical note.</p>
+      </div>
+      <div class="map-shell">
+        <div class="map-toolbar">
+          <div class="map-year"><span>YEAR</span><strong id="year-label">1825</strong></div>
+          <div class="slider-wrap">
+            <input id="year-slider" type="range" min="1825" max="1900" step="5" value="1825" aria-label="Choose a year between 1825 and 1900">
+            <div class="range-labels"><span>1825</span><span>1850</span><span>1875</span><span>1900</span></div>
+          </div>
+          <button id="play-button" class="play-button" type="button" aria-label="Play timeline"><span class="play-symbol">▶</span><span class="play-text">PLAY</span></button>
+        </div>
+        <div class="map-main">
+          <div id="map" aria-label="Interactive map of representative railroad growth in the Northeastern United States"></div>
+          <aside class="map-info" aria-live="polite">
+            <div class="info-top"><span id="map-era">THE FIRST LINES</span><span class="info-count"><b id="route-count">0</b> ROUTES</span></div>
+            <h3 id="info-title">A region<br>awaits its rails.</h3>
+            <p id="info-copy">Use the timeline to reveal rail corridors as the network grows. The routes shown are selected historical examples, not a complete map of every railway.</p>
+            <div class="selected-route" id="selected-route"><span class="route-swatch"></span><span id="route-label">Select a colored route</span></div>
+            <div class="legend">
+              <span><i class="legend-dot early"></i>Early corridors</span>
+              <span><i class="legend-dot trunk"></i>Major connections</span>
+              <span><i class="legend-dot later"></i>Later expansion</span>
+            </div>
+            <p class="map-note">Route paths are schematic; opening years are approximate milestones. Base map © OpenStreetMap contributors.</p>
+          </aside>
+        </div>
+        <div class="map-footer"><span>THE NORTHEAST · UNITED STATES</span><span>SCHEMATIC HISTORICAL OVERLAY <b>↗</b></span></div>
+      </div>
+    </section>
+
+    <section class="impact section-wrap">
+      <div class="section-label"><span>04</span><span>WHAT THE RAILROAD CHANGED</span></div>
+      <div class="impact-grid">
+        <div><h2>More than<br>a faster <em>ride.</em></h2><p class="impact-lead">The rails changed the shape of daily life and the economy.</p></div>
+        <article class="impact-card"><span>01 / TIME</span><h3>Schedules<br>became standard</h3><p>Rail timetables helped normalize clock-based coordination. In 1883, U.S. railroads adopted standard time zones for their operations.</p></article>
+        <article class="impact-card"><span>02 / TRADE</span><h3>Markets<br>grew closer</h3><p>Reliable routes expanded the movement of manufactured goods, raw materials, mail, and agricultural products between towns and ports.</p></article>
+        <article class="impact-card"><span>03 / PLACE</span><h3>Communities<br>reconnected</h3><p>Stations brought new access and investment, while rail corridors also redirected commerce and reshaped where towns grew.</p></article>
+      </div>
+    </section>
+
+    <section class="closing">
+      <p class="eyebrow"><span class="eyebrow-line"></span> THE NETWORK IS NEVER FINISHED</p>
+      <h2>Every line<br>leaves a <em>mark.</em></h2>
+      <p>Railroads were built to connect places. Their legacy is still visible in the routes, cities, and landscapes that grew around them.</p>
+      <a href="#map-section">Return to the map <span>↑</span></a>
+    </section>
+  </main>
+
+  <footer><a class="wordmark" href="#top"><span class="mark">T</span><span>FIELD NOTES <b>／ RAIL HISTORY</b></span></a><p>Historical overview and schematic route visualization. See README for sources and notes.</p><span>© TRACKS OF CHANGE · 2026</span></footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>
